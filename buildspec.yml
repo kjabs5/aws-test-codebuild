@@ -4,14 +4,16 @@ phases:
   install:
     runtime-versions:
       java: corretto11
+  build:
+    commands:
+      - mvn clean package
   post_build:
     commands:
-      - mvn package
-      - mv target/aws-codebuild-test-0.0.1-SNAPSHOT.war aws-codebuild-test-0.0.1-SNAPSHOT.war
+      - echo Build completed successfully
 artifacts:
   files:
-    - aws-codebuild-test-0.0.1-SNAPSHOT.war
-    - .ebextensions/**/*
+    - target/aws-codebuild-test.war
+  discard-paths: yes
 
     
     
