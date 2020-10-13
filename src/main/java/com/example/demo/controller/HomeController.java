@@ -8,15 +8,7 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String home() {
-		return "welcome kishor"
-				+ "";
-	}
-	
-	
-	@RequestMapping("/home")
-	public String home1() {
-		return "welcome Youtube"
-				+ "";
+		return "welcome to codebuild";
 	}
 
 }
