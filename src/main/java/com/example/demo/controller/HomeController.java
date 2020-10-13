@@ -11,5 +11,12 @@ public class HomeController {
 		return "welcome kishor"
 				+ "";
 	}
+	
+	
+	@RequestMapping("/home")
+	public String home1() {
+		return "welcome Youtube"
+				+ "";
+	}
 
 }
