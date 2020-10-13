@@ -10,5 +10,10 @@ public class HomeController {
 	public String home() {
 		return "welcome to codebuild";
 	}
+	
+	@RequestMapping("/home")
+	public String homeadd() {
+		return "welcome kishor to your home";
+	}
 
 }
