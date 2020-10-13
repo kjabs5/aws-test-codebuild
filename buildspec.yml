@@ -1,22 +1,16 @@
 version: 0.2
-            
 phases:
-  install:
-    runtime-versions:
-      java: corretto8
-    commands:
-      - echo install
   pre_build:
     commands:
-      - echo pre_build
+    - echo "Entered the pre-build phase"
   build:
     commands:
-      - mvn package
-      - echo build
+    - echo "Entered build phase"
+    - mvn clean prepare-package war:exploded
   post_build:
     commands:
-      - echo post_build
-
+    - echo "Entered the post-build phase"
+    - mv target/deploy ./
 artifacts:
   files:
-    - target/aws-codebuild-test-0.0.1-SNAPSHOT.war
+    - deploy/**/*
