@@ -8,7 +8,8 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String home() {
-		return "welcome to codebuild";
+		return "welcome kishor"
+				+ "";
 	}
 
 }
