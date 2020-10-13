@@ -12,7 +12,7 @@ artifacts:
   files:
     - aws-codebuild-test-0.0.1-SNAPSHOT.war
     - .ebextensions/**/*
-  base-directory: 'target/aws-codebuild-test-0.0.1-SNAPSHOT'
+
     
     
   
